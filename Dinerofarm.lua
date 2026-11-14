@@ -23,7 +23,7 @@ end
 -- ==========================================
 -- VERIFICACIÓN DE JUEGO (+1 Money Every Click)
 -- ==========================================
-local TARGET_PLACE_ID = 13230182363 -- ID oficial del juego
+local TARGET_PLACE_ID = 79039639963203 -- ID oficial del juego
 
 if game.PlaceId ~= TARGET_PLACE_ID then
     WindUI:Notify({
