@@ -39,7 +39,7 @@ end
 local Window = WindUI:CreateWindow({
     Title = "Evolution Script Hub",
     Icon = "door-open",
-    Author = "??",
+    Author = "Eduard",
     Folder = "EvolutionHub",
     Size = UDim2.fromOffset(580, 460),
     Transparent = true,
@@ -145,46 +145,6 @@ MainTab:Button({
             local rootPart = getRootPart()
             if rootPart then rootPart.CFrame = CFrameMundo2 end
         end)
-    end
-})
-
--- 3. Auto Rebirth
-local RebirthToggle = false
-MainTab:Toggle({
-    Title = "Auto Rebirth",
-    Value = false,
-    Callback = function(Value)
-        RebirthToggle = Value
-        if RebirthToggle then
-            task.spawn(function()
-                while RebirthToggle do
-                    pcall(function()
-                        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.5.1"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("Rebirth"):FireServer()
-                    end)
-                    task.wait(1)
-                end
-            end)
-        end
-    end
-})
-
--- 4. Auto Click (20 CPS)
-local ClickToggle = false
-MainTab:Toggle({
-    Title = "Auto Click (20 CPS)",
-    Value = false,
-    Callback = function(Value)
-        ClickToggle = Value
-        if ClickToggle then
-            task.spawn(function()
-                while ClickToggle do
-                    pcall(function()
-                        game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.5.1"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ClickService"):WaitForChild("RE"):WaitForChild("Click"):FireServer()
-                    end)
-                    task.wait(0.05)
-                end
-            end)
-        end
     end
 })
 
