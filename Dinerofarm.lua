@@ -21,18 +21,18 @@ if not success or not WindUI then
 end
 
 -- ==========================================
--- VERIFICACIÓN DE JUEGO (+1 Money Every Click)
+-- VERIFICACIÓN DE JUEGO (SimpleSim)
 -- ==========================================
-local TARGET_PLACE_ID = 79039639963203 -- ID oficial del juego
+local TARGET_PLACE_ID = 79039639963203
 
 if game.PlaceId ~= TARGET_PLACE_ID then
     WindUI:Notify({
         Title = "Error de Juego",
-        Content = "Este script solo funciona en +1 Money Every Click.",
+        Content = "Este script solo funciona en +1 dinero por clic.",
         Duration = 6,
         Icon = "x",
     })
-    return -- Detiene la ejecución por completo si estás en otro juego
+    return
 end
 
 -- Crear la ventana principal
